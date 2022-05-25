@@ -5,11 +5,13 @@ void main(List<String> arguments) {
 
   var dice1 = Random();
   var dice2 = Random();
+  int min = 1;
+  int max = 7;
   int compteur = 0;
 
   while (condition) {
-    var dice1Value = dice1.nextInt(7);
-    var dice2Value = dice2.nextInt(7);
+    var dice1Value = min + dice1.nextInt(max - min);
+    var dice2Value = min + dice2.nextInt(max - min);
     print("$dice1Value, $dice2Value");
     compteur++;
     if (dice1Value == 6 && dice2Value == 6) {
